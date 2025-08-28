@@ -1,0 +1,17 @@
+clc;
+clear all:
+close all;
+I=imread(‘pout.tif’);    %reads the image
+subplot(2, 2, 1);
+imshow(I);                %displays original image
+title(‘Original image’);
+Subplot(2, 2, 2);
+imhist(1, 64);         
+title(‘histogram of original image’)
+J=histeg(I);             %histogram equalization
+subplot(2, 2, 3);
+title(‘equalized image’)
+imshow(J);            % displays histogramequalized image
+subplot(2, 2,4);
+imhist(J, 64);          %displays histogram of equalized image
+title(‘histogram of equalized image’)
